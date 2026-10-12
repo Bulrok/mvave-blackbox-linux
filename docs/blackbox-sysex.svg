@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="725" height="404" viewBox="0 0 725 404" role="img" aria-label="mvave_sysex.py — Blackbox SysEx codec">
+<style>text{font-family:ui-monospace,SFMono-Regular,"DejaVu Sans Mono",Menlo,Consolas,"Liberation Mono",monospace;font-size:13px;white-space:pre}.o{fill:#c9d1d9}.p{fill:#56d364}.c{fill:#e6edf3;font-weight:bold}.d{fill:#7d8590}.t{fill:#8b949e;font-size:12px}</style>
+<rect width="725" height="404" rx="10" fill="#0d1117"/>
+<rect x=".5" y=".5" width="724" height="403" rx="10" fill="none" stroke="#30363d"/>
+<path d="M1 30h723" stroke="#30363d"/>
+<circle cx="20" cy="15.5" r="6" fill="#ff5f57"/><circle cx="40" cy="15.5" r="6" fill="#febc2e"/><circle cx="60" cy="15.5" r="6" fill="#28c840"/>
+<text class="t" x="362.5" y="20" text-anchor="middle">mvave_sysex.py — Blackbox SysEx codec</text>
+<text class="d" x="18" y="50" xml:space="preserve"># decode captured SysEx with the codec self-test (no pedal needed)</text>
+<text x="18" y="69" xml:space="preserve"><tspan class="p">$ </tspan><tspan class="c">python3 tools/mvave_sysex.py</tspan></text>
+<text class="o" x="18" y="88" xml:space="preserve">=== hb_resp (dev-&gt;app) ===</text>
+<text class="o" x="18" y="107" xml:space="preserve">  sysex (24B): F0 00 32 0D 61 00 00 00 02 00 00 00 00 42 00 00 00 14 28 04 00 60 15 F7</text>
+<text class="o" x="18" y="126" xml:space="preserve">  frame (19B): 00 59 23 0c 00 00 04 00 00 00 20 04 00 00 14 14 01 00 ae</text>
+<text class="o" x="18" y="145" xml:space="preserve">  magic=0x5900 marker=0x23 len+8=12 b5=0x00</text>
+<text class="o" x="18" y="164" xml:space="preserve">  cmd=0x04 addr=0x20000000 plen=4 b13=0x00</text>
+<text class="o" x="18" y="183" xml:space="preserve">  payload=14 14 01 00</text>
+<text class="o" x="18" y="202" xml:space="preserve">  checksum: got=0xAE calc=0xAE OK</text>
+<text class="o" x="18" y="240" xml:space="preserve">...</text>
+<text class="o" x="18" y="259" xml:space="preserve">=== vol_set_100 ===</text>
+<text class="o" x="18" y="278" xml:space="preserve">  sysex (22B): F0 00 32 09 51 00 00 00 02 00 00 00 00 21 00 00 00 64 00 14 04 F7</text>
+<text class="o" x="18" y="297" xml:space="preserve">  frame (17B): 00 59 22 0a 00 00 04 00 00 00 10 02 00 00 64 00 85</text>
+<text class="o" x="18" y="316" xml:space="preserve">  magic=0x5900 marker=0x22 len+8=10 b5=0x00</text>
+<text class="o" x="18" y="335" xml:space="preserve">  cmd=0x04 addr=0x10000000 plen=2 b13=0x00</text>
+<text class="o" x="18" y="354" xml:space="preserve">  payload=64 00</text>
+<text class="o" x="18" y="373" xml:space="preserve">  checksum: got=0x85 calc=0x85 OK</text>
+</svg>

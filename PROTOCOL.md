@@ -43,6 +43,8 @@ def pack7(data8):                    # 8-bit frame -> SysEx body
 
 ## Frame
 
+![Frame layout of the worked example below: magic 00 59, marker 23, len+8, sub-target, command 04, address 0x10000000, length 2, flags, payload 64 00 and checksum 85 covering bytes 6 to 15](docs/blackbox-frame.svg)
+
 ```
 off  size  field
 0    2     magic          0x5900 (little endian: 00 59)

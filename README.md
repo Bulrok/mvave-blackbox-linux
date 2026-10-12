@@ -14,6 +14,8 @@ The vendor ships Windows and macOS software only. Two things work on Linux:
 The pedal's **audio interface needs nothing at all**: `snd-usb-audio` binds it
 as a class-compliant card, 44.1 kHz / 24-bit, 2 in / 2 out.
 
+![Terminal: the SysEx codec self-test decoding a captured heartbeat reply and a volume write into magic, marker, command, address, payload and a verified checksum](docs/blackbox-sysex.svg)
+
 ## Hardware
 
 | | |

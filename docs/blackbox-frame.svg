@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="304" viewBox="0 0 800 304" role="img" aria-label="Blackbox SysEx frame layout">
+<style>text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#c9d1d9}.m{font-family:ui-monospace,SFMono-Regular,"DejaVu Sans Mono",Menlo,Consolas,monospace}.h{font-size:15px;font-weight:600;fill:#e6edf3}.s{font-size:12px;fill:#8b949e}.b{font-size:13px;fill:#e6edf3}.f{font-size:12px}.o{font-size:11px;fill:#7d8590}</style>
+<rect width="800" height="304" rx="10" fill="#0d1117"/><rect x=".5" y=".5" width="799" height="303" rx="10" fill="none" stroke="#30363d"/>
+<text class="h" x="30" y="34">Blackbox control frame</text>
+<text class="s" x="30" y="54">USB-MIDI SysEx: F0 &lt;8-bit frame re-packed 7 bits at a time, LSB first&gt; F7</text>
+<text class="s" x="30" y="72">Example: reply to READ 0x10000000 len=2 (master volume = 0x0064 = 100). Multi-byte fields are little-endian.</text>
+<rect x="30" y="122" width="78" height="42" rx="5" fill="#6e7681" fill-opacity=".3" stroke="#6e7681"/>
+<text class="m b" x="69.0" y="148" text-anchor="middle">00 59</text>
+<text class="f" x="69.0" y="182" text-anchor="middle">magic</text>
+<text class="o m" x="69.0" y="114" text-anchor="middle">0-1</text>
+<rect x="112" y="122" width="50" height="42" rx="5" fill="#6e7681" fill-opacity=".3" stroke="#6e7681"/>
+<text class="m b" x="137.0" y="148" text-anchor="middle">23</text>
+<text class="f" x="137.0" y="182" text-anchor="middle">marker</text>
+<text class="o m" x="137.0" y="114" text-anchor="middle">2</text>
+<rect x="166" y="122" width="78" height="42" rx="5" fill="#6e7681" fill-opacity=".3" stroke="#6e7681"/>
+<text class="m b" x="205.0" y="148" text-anchor="middle">0a 00</text>
+<text class="f" x="205.0" y="182" text-anchor="middle">len+8</text>
+<text class="o m" x="205.0" y="114" text-anchor="middle">3-4</text>
+<rect x="248" y="122" width="50" height="42" rx="5" fill="#6e7681" fill-opacity=".3" stroke="#6e7681"/>
+<text class="m b" x="273.0" y="148" text-anchor="middle">00</text>
+<text class="f" x="273.0" y="182" text-anchor="middle">sub</text>
+<text class="o m" x="273.0" y="114" text-anchor="middle">5</text>
+<rect x="302" y="122" width="50" height="42" rx="5" fill="#1f6feb" fill-opacity=".3" stroke="#1f6feb"/>
+<text class="m b" x="327.0" y="148" text-anchor="middle">04</text>
+<text class="f" x="327.0" y="182" text-anchor="middle">cmd</text>
+<text class="o m" x="327.0" y="114" text-anchor="middle">6</text>
+<rect x="356" y="122" width="134" height="42" rx="5" fill="#1f6feb" fill-opacity=".3" stroke="#1f6feb"/>
+<text class="m b" x="423.0" y="148" text-anchor="middle">00 00 00 10</text>
+<text class="f" x="423.0" y="182" text-anchor="middle">address</text>
+<text class="o m" x="423.0" y="114" text-anchor="middle">7-10</text>
+<rect x="494" y="122" width="78" height="42" rx="5" fill="#1f6feb" fill-opacity=".3" stroke="#1f6feb"/>
+<text class="m b" x="533.0" y="148" text-anchor="middle">02 00</text>
+<text class="f" x="533.0" y="182" text-anchor="middle">length</text>
+<text class="o m" x="533.0" y="114" text-anchor="middle">11-12</text>
+<rect x="576" y="122" width="50" height="42" rx="5" fill="#1f6feb" fill-opacity=".3" stroke="#1f6feb"/>
+<text class="m b" x="601.0" y="148" text-anchor="middle">00</text>
+<text class="f" x="601.0" y="182" text-anchor="middle">flags</text>
+<text class="o m" x="601.0" y="114" text-anchor="middle">13</text>
+<rect x="630" y="122" width="78" height="42" rx="5" fill="#2ea043" fill-opacity=".3" stroke="#2ea043"/>
+<text class="m b" x="669.0" y="148" text-anchor="middle">64 00</text>
+<text class="f" x="669.0" y="182" text-anchor="middle">payload</text>
+<text class="o m" x="669.0" y="114" text-anchor="middle">14-15</text>
+<rect x="712" y="122" width="50" height="42" rx="5" fill="#d29922" fill-opacity=".3" stroke="#d29922"/>
+<text class="m b" x="737.0" y="148" text-anchor="middle">85</text>
+<text class="f" x="737.0" y="182" text-anchor="middle">sum</text>
+<text class="o m" x="737.0" y="114" text-anchor="middle">16</text>
+<text class="o" x="30" y="96">byte offset</text>
+<path d="M302 196v6H708v-6" fill="none" stroke="#d29922" stroke-width="1.5"/>
+<text class="f" x="505.0" y="220" text-anchor="middle" style="fill:#d29922">checksum = ~(sum of bytes 6 .. 15) &amp; 0xFF = ~0x7A = 0x85</text>
+<text class="s" x="30" y="258">marker 0x23 = read, 0x22 = write, 0x00 = ack · length = bytes to read, or payload length on write</text>
+<text class="s m" x="30" y="280">sysex  F0 00 32 0D 51 00 00 00 02 00 00 00 00 21 00 00 00 64 00 14 04 F7</text>
+</svg>
