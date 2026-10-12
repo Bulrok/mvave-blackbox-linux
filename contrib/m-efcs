@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# M-EFCS (M-Vave multi-effects editor) under Wine.
+# Vendor ships Windows/macOS only; this runs the Windows build against the
+# pedal's USB-MIDI port, which Linux exposes natively via snd-usb-audio.
+set -euo pipefail
+
+export WINEPREFIX="${WINEPREFIX:-$HOME/.local/share/wineprefixes/mvave}"
+export WINEDEBUG="${WINEDEBUG:--all}"
+# The app is a Flutter bundle: it resolves data/ relative to the cwd.
+APPDIR="$WINEPREFIX/drive_c/M-EFCS"
+
+if [[ ! -x "$APPDIR/m_efcs.exe" && ! -f "$APPDIR/m_efcs.exe" ]]; then
+    echo "M-EFCS not installed at $APPDIR" >&2
+    exit 1
+fi
+
+cd "$APPDIR"
+exec wine m_efcs.exe "$@"

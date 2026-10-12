@@ -1,0 +1,38 @@
+# Vendor software and anything unpacked from it - obtain it from the vendor
+downloads/
+extracted/
+*.exe
+*.dll
+*.dll.orig
+*.zip
+*.apk
+*.dmg
+*.fwsc
+
+# The vendor's app icon (not ours)
+icons/
+
+# Personal data: preset dumps, captures, trained/distilled weights
+backups/
+models/
+*.bin
+*.cab
+*.npz
+*.wav
+*.nam
+*.log
+
+# Local machine config (PipeWire node names embed device serials)
+*.local.json
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Misc
+*.bak
+CLAUDE.md
+
+# Third-party API client, kept local only
+tools/t3k.py

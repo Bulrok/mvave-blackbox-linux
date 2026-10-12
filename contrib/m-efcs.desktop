@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=M-EFCS
+GenericName=M-Vave Multi-Effects Editor
+Comment=Edit M-Vave Blackbox presets, amps and cabs over USB MIDI
+Exec=m-efcs
+Icon=m-efcs
+Terminal=false
+Categories=AudioVideo;Audio;Music;
+Keywords=mvave;m-vave;blackbox;guitar;amp;pedal;midi;effects;
+StartupWMClass=m_efcs.exe
